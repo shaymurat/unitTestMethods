@@ -24,25 +24,25 @@ class TournamentTest(unittest.TestCase):
     def test_usain_nik(self):
         tour = Tournament(90, self.usain, self.nik)
         results = tour.start()
-        self.__class__.all_results[inspect.stack()[0][3]] = results
+        self.all_results[inspect.stack()[0][3]] = results
         self.assertTrue('Ник' == results[len(results)].name)
 
     def test_andrey_nik(self):
         tour = Tournament(90, self.andrey, self.nik)
         results = tour.start()
-        self.__class__.all_results[inspect.stack()[0][3]] = results
+        self.all_results[inspect.stack()[0][3]] = results
         self.assertTrue('Ник' == results[len(results)].name)
 
     def test_usain_andrey_nik(self):
         tour = Tournament(90, self.usain, self.andrey, self.nik)
         results = tour.start()
-        self.__class__.all_results[inspect.stack()[0][3]] = results
+        self.all_results[inspect.stack()[0][3]] = results
         self.assertTrue('Ник' == results[len(results)].name)
 
     def test_nik_andrey_usain_8(self):
         tour = Tournament(8, self.nik, self.andrey, self.usain)
         results = tour.start()
-        self.__class__.all_results[inspect.stack()[0][3]] = results
+        self.all_results[inspect.stack()[0][3]] = results
         self.assertTrue('Ник' == results[len(results)].name)
 
 
